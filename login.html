@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Login Interface</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('m5.JPG ') no-repeat center center fixed; 
+            background-size: cover; 
+            height: 100vh; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            position: relative; 
+        }
+        .welcome-message {
+            position: absolute; 
+            top: 20px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            color: black; 
+            font-size: 28px; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); 
+            font-weight: bold; 
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.4); 
+            backdrop-filter: blur(10px); 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+            width: 400px; 
+            text-align: center; 
+            position: relative; 
+            margin-top: 60px; 
+        }
+        .profile-image {
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            position: absolute; 
+            top: -50px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 1; 
+        }
+        h2 {
+            margin-bottom: 20px; 
+            color: black; 
+            font-weight: bold; 
+            font-size: 30px; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+        }
+        .input-group {
+            margin-bottom: 20px; 
+            position: relative; 
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            outline: none; 
+            background: transparent; 
+            color: black; 
+            font-size: 16px; 
+            text-align: center; 
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7); 
+        }
+        input:focus {
+            border-bottom: 2px solid #ff7e5f; 
+        }
+        button {
+            width: 100%; 
+            padding: 15px; 
+            background-color: rgba(255, 200, 100, 0.8); 
+            color: white; 
+            border: none; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            font-size: 18px; 
+            transition: background-color 0.3s; 
+        }
+        button:hover {
+            background-color: rgba(255, 150, 50, 0.9); 
+        }
+        .forgot-password {
+            margin-top: 15px; 
+            font-size: 14px; 
+            color: black; 
+            text-decoration: none; 
+            transition: color 0.3s; 
+        }
+        .forgot-password2 {
+            margin-top: 15px; 
+            font-size: 18px; 
+            color: black; 
+            text-decoration: none; 
+            transition: color 0.3s; 
+            font-weight: bold; 
+
+        }
+        .forgot-password:hover {
+            color: #ff7e5f; 
+        }
+        .additional-text {
+            margin-top: 20px; 
+            color: white; 
+            font-size: 14px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">نظام المصادقة الثنائية</div>
+    <div class="login-container">
+        
+        <img src="m2.JPG" alt="Profile Image" class="profile-image">
+        <h2>Welcome Back!</h2>
+
+        <form method="POST" action="Login.php">
+           
+            <div class="input-group">
+                <input type="text" placeholder="Username" name="Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Password" name="password" required> 
+            </div>
+            
+
+            <button type="submit" name="save">Log In</button><br><br>
+
+            <a href="#" class="forgot-password"> Forgot your password? </a>
+        </form>
+
+    </div>
+</body>
+</html>
